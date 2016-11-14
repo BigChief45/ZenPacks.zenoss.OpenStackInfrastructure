@@ -18,7 +18,7 @@ $ZENHOME/ZenPacks/easy-install.pth.
 
 """
 
-from . import zenpacklib
+from ZenPacks.zenoss.ZenPackLib import zenpacklib
 
 #------------------------------------------------------------------------------
 # Load Yaml here
@@ -33,7 +33,7 @@ log = logging.getLogger('zen.OpenStack')
 from Products.ZenUtils.Utils import unused
 from OFS.CopySupport import CopyError
 
-from . import schema
+schema = CFG.zenpack_module.schema
 
 NOVAHOST_PLUGINS = ['zenoss.cmd.linux.openstack.nova',
                     'zenoss.cmd.linux.openstack.libvirt',
